@@ -15,16 +15,10 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.green,
         ),
-        body: const Center( // all widgets must have a property. when youre nesting widgets inside of each other, use child:
-          child: Text(
-            'Hello!',
-            style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              fontFamily: 'IndieFlower',
-              color: Colors.red,
-            ),
+        body: Center( // all widgets must have a property. when youre nesting widgets inside of each other, use child:
+          child: Image.asset('assets/Cristiano_Ronaldo_Picture.jpeg'
+            // image: AssetImage('assets/Cristiano_Ronaldo_Picture.jpeg'),
+            // image: NetworkImage('https://upload.wikimedia.org/wikipedia/commons/b/b2/Cristiano_Ronaldo_%28163461623%29.jpeg'),
           ),
         ),
         floatingActionButton: FloatingActionButton(
