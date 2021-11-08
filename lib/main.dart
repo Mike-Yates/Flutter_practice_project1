@@ -16,18 +16,12 @@ class Home extends StatelessWidget {
           backgroundColor: Colors.green,
         ),
         body: Center( // all widgets must have a property. when youre nesting widgets inside of each other, use child:
-          child: ElevatedButton.icon(
+          child: IconButton(
             onPressed: () {
-              print("click me button was clicked.");
+              print("icon was clicked");
             },
-            icon: Icon(
-              Icons.account_balance_sharp,
-            ),
-            label: Text("click me!!"),
-            style: ElevatedButton.styleFrom(
-            primary: Colors.black,
-            )
-          ),
+            icon: Icon(Icons.account_balance),
+          )
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () { },  // onPressed is an anonymous function
