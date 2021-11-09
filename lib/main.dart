@@ -15,25 +15,35 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.green,
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            Text("hello world!!"),
-            TextButton(
-              style: TextButton.styleFrom(
-                primary: Colors.blue,
-                backgroundColor: Colors.green,
-              ),
-              onPressed: (){},
-              child: Text("Click me"),
+            Row(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                // crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text("first"),
+                  Text("ok..."),
+                  Text("Thirdd"),
+                  ]
             ),
             Container(
-              color: Colors.cyan,
+              padding: EdgeInsets.all(20.0),
+              color: Colors.blue,
+              child: Text("first"),
+            ),
+            Container(
               padding: EdgeInsets.all(30.0),
-              child: Text("inside the container"),
-            )
-          ],
+              color: Colors.green,
+              child: Text("two"),
+            ),
+            Container(
+              padding: EdgeInsets.all(40.0),
+              color: Colors.yellow,
+              child: Text("third"),
+            ),
+          ]
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () { },  // onPressed is an anonymous function
