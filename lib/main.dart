@@ -11,43 +11,43 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Mikes title!!'),
+          title: const Text('Mikes title'),
           centerTitle: true,
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.blue,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Container(
+      body: Row(
+        children: [
+          Expanded(
+            flex: 2,
+              child: Image.asset('assets/Cristiano_Ronaldo_Picture.jpeg')
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
               padding: EdgeInsets.all(30.0),
-              color: Colors.blue,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Text("first"),
-                    Text("ok..."),
-                    Text("Thirdd"),
-                  ]
-              ),
+              color: Colors.cyan,
+              child: Text("1"),
             ),
-            Container(
-              padding: EdgeInsets.all(40),
-              color: Colors.green,
-              child: Center(
-              child: Text("two"),
-              ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child: Text("2"),
             ),
-            Container(
-              padding: EdgeInsets.all(40.0),
-              color: Colors.yellow,
-              child: Text("third"),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amberAccent,
+              child: Text("3"),
             ),
-          ]
-        ),
+          ),
+        ],
+      ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () { },  // onPressed is an anonymous function
+          onPressed: () {print("icon was clicked"); },  // onPressed is an anonymous function
           child: Text('click'),
           backgroundColor: Colors.green,
         ),
